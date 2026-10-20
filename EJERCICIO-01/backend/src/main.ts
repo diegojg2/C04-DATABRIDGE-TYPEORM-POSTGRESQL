@@ -7,4 +7,5 @@ async function bootstrap() {
   await app.listen(3000, '0.0.0.0');
   console.log('API disponible en http://localhost:3000');
 }
+
 bootstrap();
