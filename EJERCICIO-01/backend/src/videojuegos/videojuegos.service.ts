@@ -18,23 +18,26 @@ export class VideojuegosService implements OnModuleInit {
 
   // Solo para este primer ejercicio:
   // al arrancar añadimos ejemplos si la tabla está vacía.
-  async onModuleInit(): Promise<void> {
+async onModuleInit(): Promise<void> {
     const total = await this.repository.count();
 
     if (total === 0) {
       const iniciales = [
         this.repository.create({
           titulo: 'Hollow Knight',
+          genero: 'Metroidvania',
           plataforma: 'Nintendo Switch',
           puntuacion: 9.4,
         }),
         this.repository.create({
           titulo: 'Zelda: Tears of the Kingdom',
+          genero: 'Aventura',
           plataforma: 'Nintendo Switch',
           puntuacion: 9.8,
         }),
         this.repository.create({
           titulo: 'Forza Horizon 5',
+          genero: 'Conducción',
           plataforma: 'Xbox',
           puntuacion: 9.1,
         }),

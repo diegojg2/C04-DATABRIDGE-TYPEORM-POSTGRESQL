@@ -17,6 +17,7 @@ import {
 type Videojuego = {
   id: number;
   titulo: string;
+  genero: string;
   plataforma: string;
   puntuacion: number;
 };
@@ -89,8 +90,10 @@ export default function App() {
               </View>
 
               <View style={styles.cardContent}>
-                <Text style={styles.gameTitle}>{item.titulo}</Text>
-                <Text style={styles.platform}>{item.plataforma}</Text>
+               <Text style={styles.gameTitle}>{item.titulo}</Text>
+                <Text style={styles.platform}>
+                 {item.genero} · {item.plataforma}
+               </Text>
               </View>
 
               <View style={styles.score}>
