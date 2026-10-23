@@ -1,4 +1,3 @@
-// restaurante.entity.ts
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('restaurantes')
@@ -16,4 +15,8 @@ export class Restaurante {
   ciudad: string;
 
   @Column('decimal', { precision: 3, scale: 1 })
-  puntuacion: number;}
+  puntuacion: number;
+
+  @Column('decimal', { precision: 6, scale: 2, default: 0 })
+  precioMedio: number;
+}
