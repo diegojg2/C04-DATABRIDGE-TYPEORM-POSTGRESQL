@@ -1,5 +1,3 @@
-// pelicula.entity.ts
-// RESPONSABILIDAD: definir las columnas persistentes de una película.
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity('peliculas')
@@ -18,4 +16,7 @@ export class Pelicula {
 
   @Column('decimal', { precision: 3, scale: 1 })
   puntuacion: number;
+
+  @Column({ default: false })
+  favorita: boolean;
 }
